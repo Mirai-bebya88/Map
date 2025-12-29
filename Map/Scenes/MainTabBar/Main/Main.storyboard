@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="kzM-Uw-Vzc">
+            <objects>
+                <viewController storyboardIdentifier="MainID" id="IE0-Gl-QIz" customClass="MainViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="okr-wU-mso">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-zz-uDN">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUV-B7-pAh">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="784"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v1R-7v-dkn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v1R-7v-dkn" firstAttribute="trailing" secondItem="oUV-B7-pAh" secondAttribute="trailing" id="7O6-qE-KVJ"/>
+                            <constraint firstItem="oUV-B7-pAh" firstAttribute="leading" secondItem="v1R-7v-dkn" secondAttribute="leading" id="AYq-k2-e91"/>
+                            <constraint firstItem="v1R-7v-dkn" firstAttribute="trailing" secondItem="HCI-zz-uDN" secondAttribute="trailing" id="aHV-WP-mDK"/>
+                            <constraint firstItem="oUV-B7-pAh" firstAttribute="top" secondItem="okr-wU-mso" secondAttribute="top" id="bt0-f6-8Fk"/>
+                            <constraint firstItem="HCI-zz-uDN" firstAttribute="top" secondItem="v1R-7v-dkn" secondAttribute="top" id="ef4-N9-ePQ"/>
+                            <constraint firstItem="HCI-zz-uDN" firstAttribute="leading" secondItem="v1R-7v-dkn" secondAttribute="leading" id="fGE-Qf-F3N"/>
+                            <constraint firstItem="v1R-7v-dkn" firstAttribute="bottom" secondItem="HCI-zz-uDN" secondAttribute="bottom" id="mIT-su-RD0"/>
+                            <constraint firstItem="v1R-7v-dkn" firstAttribute="bottom" secondItem="oUV-B7-pAh" secondAttribute="bottom" id="wty-Nz-Q8y"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="list.bullet.rectangle.fill" catalog="system" id="BMT-4w-f5o"/>
+                    <connections>
+                        <outlet property="countryTableView" destination="HCI-zz-uDN" id="VuE-Vl-4AU"/>
+                        <outlet property="mapView" destination="oUV-B7-pAh" id="ggu-5F-TiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="up4-9G-5tn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388.54961832061065" y="221.83098591549296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

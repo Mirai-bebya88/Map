@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country-->
+        <scene sceneID="LKo-Og-fR8">
+            <objects>
+                <viewController storyboardIdentifier="CountryID" id="MRt-om-fN2" customClass="CountryViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHn-qh-Mm4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uti-jf-Ihj">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-IH-q1s">
+                                <rect key="frame" x="60" y="208" width="233" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-FU-7QV">
+                                <rect key="frame" x="308" y="208" width="70" height="36"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="MRt-om-fN2" eventType="touchUpInside" id="ic4-wh-VqJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h1T-mF-lno"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h1T-mF-lno" firstAttribute="bottom" secondItem="9dL-FU-7QV" secondAttribute="bottom" constant="540" id="257-Mp-0nZ"/>
+                            <constraint firstItem="h1T-mF-lno" firstAttribute="trailing" secondItem="9dL-FU-7QV" secondAttribute="trailing" constant="15" id="CR2-qi-uF3"/>
+                            <constraint firstItem="9dL-FU-7QV" firstAttribute="leading" secondItem="dh4-IH-q1s" secondAttribute="trailing" constant="15" id="Nyf-wB-C4T"/>
+                            <constraint firstItem="uti-jf-Ihj" firstAttribute="trailing" secondItem="h1T-mF-lno" secondAttribute="trailing" id="QFH-gd-ICl"/>
+                            <constraint firstItem="dh4-IH-q1s" firstAttribute="leading" secondItem="h1T-mF-lno" secondAttribute="leading" constant="60" id="WYK-cC-go2"/>
+                            <constraint firstItem="9dL-FU-7QV" firstAttribute="top" secondItem="h1T-mF-lno" secondAttribute="top" constant="90" id="Wmo-di-620"/>
+                            <constraint firstItem="uti-jf-Ihj" firstAttribute="bottom" secondItem="h1T-mF-lno" secondAttribute="bottom" id="Yfz-sH-ZLA"/>
+                            <constraint firstItem="h1T-mF-lno" firstAttribute="trailing" secondItem="dh4-IH-q1s" secondAttribute="trailing" constant="100" id="Zkc-9k-yCm"/>
+                            <constraint firstItem="h1T-mF-lno" firstAttribute="bottom" secondItem="dh4-IH-q1s" secondAttribute="bottom" constant="540" id="c97-Eh-n0p"/>
+                            <constraint firstItem="uti-jf-Ihj" firstAttribute="leading" secondItem="h1T-mF-lno" secondAttribute="leading" id="h1E-ZG-stT"/>
+                            <constraint firstItem="uti-jf-Ihj" firstAttribute="top" secondItem="h1T-mF-lno" secondAttribute="top" id="pr7-kK-HP0"/>
+                            <constraint firstItem="dh4-IH-q1s" firstAttribute="top" secondItem="h1T-mF-lno" secondAttribute="top" constant="90" id="rAT-sM-iTn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Country" image="pin.circle" catalog="system" id="s6C-mf-t3y"/>
+                    <connections>
+                        <outlet property="countryNameTextField" destination="dh4-IH-q1s" id="uaf-E6-Blu"/>
+                        <outlet property="mapView" destination="uti-jf-Ihj" id="jg7-qb-N2f"/>
+                        <outlet property="searchButton" destination="9dL-FU-7QV" id="1UJ-P0-f60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLa-4N-Gkj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180.9160305343512" y="-392.25352112676057"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="pin.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

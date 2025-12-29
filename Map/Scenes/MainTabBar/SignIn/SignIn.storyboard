@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In-->
+        <scene sceneID="5bB-Rp-Ksz">
+            <objects>
+                <viewController storyboardIdentifier="SignInID" id="xbp-lF-MZm" customClass="SignInViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJZ-46-Hdw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select You working Place..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-Bj-znh">
+                                <rect key="frame" x="20" y="134" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SGD-EV-557"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPt-WU-77W">
+                                <rect key="frame" x="0.0" y="174" width="393" height="610"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hk9-Iu-VBd">
+                                <rect key="frame" x="0.0" y="182" width="393" height="602"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="USq-oN-NEx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LPt-WU-77W" firstAttribute="top" secondItem="bgq-Bj-znh" secondAttribute="bottom" id="5fB-zX-mCV"/>
+                            <constraint firstItem="USq-oN-NEx" firstAttribute="trailing" secondItem="Hk9-Iu-VBd" secondAttribute="trailing" id="6Q5-zD-b0n"/>
+                            <constraint firstItem="USq-oN-NEx" firstAttribute="trailing" secondItem="bgq-Bj-znh" secondAttribute="trailing" constant="20" id="E9L-Ee-rEw"/>
+                            <constraint firstItem="bgq-Bj-znh" firstAttribute="top" secondItem="USq-oN-NEx" secondAttribute="top" constant="16" id="ESL-XO-3GY"/>
+                            <constraint firstItem="Hk9-Iu-VBd" firstAttribute="leading" secondItem="USq-oN-NEx" secondAttribute="leading" id="PtZ-LB-I3x"/>
+                            <constraint firstItem="bgq-Bj-znh" firstAttribute="leading" secondItem="USq-oN-NEx" secondAttribute="leading" constant="20" id="SKA-hd-THU"/>
+                            <constraint firstItem="USq-oN-NEx" firstAttribute="trailing" secondItem="LPt-WU-77W" secondAttribute="trailing" id="TZj-mz-fvm"/>
+                            <constraint firstAttribute="bottom" secondItem="LPt-WU-77W" secondAttribute="bottom" constant="68" id="Taf-Zf-Ypy"/>
+                            <constraint firstItem="LPt-WU-77W" firstAttribute="bottom" secondItem="KJZ-46-Hdw" secondAttribute="bottom" constant="-68" id="YOK-Ww-Nbw"/>
+                            <constraint firstItem="USq-oN-NEx" firstAttribute="bottom" secondItem="Hk9-Iu-VBd" secondAttribute="bottom" id="aEI-1l-4OE"/>
+                            <constraint firstItem="Hk9-Iu-VBd" firstAttribute="top" secondItem="bgq-Bj-znh" secondAttribute="bottom" constant="8" symbolic="YES" id="fOQ-hv-8Vw"/>
+                            <constraint firstItem="LPt-WU-77W" firstAttribute="leading" secondItem="KJZ-46-Hdw" secondAttribute="leading" id="uys-f1-WdV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sign In" image="long.text.page.and.pencil.fill" catalog="system" id="es8-IC-UXc"/>
+                    <connections>
+                        <outlet property="countriesTableView" destination="Hk9-Iu-VBd" id="Yot-dt-VWx"/>
+                        <outlet property="mapView" destination="LPt-WU-77W" id="3pA-JE-Sxb"/>
+                        <outlet property="workingPlace" destination="bgq-Bj-znh" id="HqD-3T-lTH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3m-Yc-7kU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319.84732824427482" y="-755.63380281690149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="long.text.page.and.pencil.fill" catalog="system" width="112" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
